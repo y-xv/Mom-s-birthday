@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  background: #000000;
+  cursor: crosshair;
+}
+canvas{display:block}
+#soundButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
+}
+#picture {
+    position: fixed;
+    top: 20px;
+    right: 100%; /* Initially position the picture outside the viewport */
+    opacity: 0; /* Initially hide the picture */
+    width: 500px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 9999;
+    animation: fadeInRight 1s forwards; /* Apply fade-in animation */
+}
+
+@keyframes fadeInRight {
+    from {
+        right: -100%; /* Start off screen */
+        opacity: 0; /* Fully transparent */
+    }
+    to {
+        right: 20px; /* End position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+h1 {
+  position: absolute;
+  top: 15%;
+  left: 17%;
+  color: #fff;
+  font-size: 5em;
+  font-weight: 900;
+  -webkit-user-select: none;
+  user-select: none;
+}
+h2 {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  color: #fff;
+  font-size: 4em;
+  font-weight: 900;
+  -webkit-user-select: none;
+  user-select: none;
+}
+p {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 17%;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 100;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 3s ease-in forwards;
+}
+.left-div {
+    position: absolute; /* Position the div */
+    top: 0; /* Adjust the top position as needed */
+    left: 0; /* Align to the left side */
+    width: 50%; /* Adjust the width as needed */
+    background-color: lightblue; /* Just for visualization */
+}
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
